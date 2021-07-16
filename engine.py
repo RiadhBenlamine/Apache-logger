@@ -82,6 +82,3 @@ class FileEngine(multiprocessing.Process):
     
     def run(self):
         return self.log_parser(self.open_log())
-    
-fe = FileEngine('C:\\Users\\User1\Desktop\\log.log')
-xx = fe.run()
