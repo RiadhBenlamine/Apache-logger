@@ -47,7 +47,7 @@ class TemplateEngine(threading.Thread):
     def analyze(self, entry):
         for item in self.template['points']:
             if self.template['points'][item] != False:
-                if re.match(self.template['points'][item], entry[item]):
+                if re.search(self.template['points'][item], entry[item], re.IGNORECASE):
                     return entry
                     self.counter += 1
 
