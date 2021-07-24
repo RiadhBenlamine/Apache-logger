@@ -1,0 +1,17 @@
+{
+    "description":{
+        "template_name":"Hacking tools detector",
+        "author":"Riadh Benlamine",
+        "description":"Detect scanners fingerprints"
+    },
+    "points":{
+        "host":false,
+        "user":false,
+        "time":false,
+        "request":false,
+        "status":false,
+        "size":false,
+        "referrer":false,
+        "agent":"\\w*nikto|acunetix|nmap|sqlmap|wpscan\\w*"
+    }
+}
