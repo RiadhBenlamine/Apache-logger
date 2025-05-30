@@ -37,19 +37,19 @@ class TemplateEngine(threading.Thread):
                 raise KeyNotFound(
                     'one or more keys are missing, make sure you have this keys "template_name" and "author" are in this template.'
                     )
-                sys.exit(1)
+                
         for key in ['host', 'request', 'agent', 'referrer', 'status', 'time', 'user', 'size']:
             if key not in points:
                     raise KeyNotFound('one or more keys are missing in this template.')
-                    sys.exit(1)
         return True
     
     def analyze(self, entry):
         for item in self.template['points']:
             if self.template['points'][item] != False:
                 if re.search(self.template['points'][item], entry[item], re.IGNORECASE):
-                    return entry
                     self.counter += 1
+                    return entry
+                    
 
 
     def run(self):
@@ -82,7 +82,7 @@ class FileEngine(multiprocessing.Process):
             r'\[(?P<time>.+)\]',                # time %t
             r'"(?P<request>.*)"',               # request "%r"
             r'(?P<status>[0-9]+)',              # status %>s
-            r'(?P<size>\S+)',                   # size %b (careful, can be '-')
+            r'(?P<size>\S+)',                   # size %b 
             r'"(?P<referrer>.*)"',              # referrer "%{Referer}i"
             r'"(?P<agent>.*)"',                 # user agent "%{User-agent}i"
         ]
@@ -94,4 +94,3 @@ class FileEngine(multiprocessing.Process):
     
     def run(self):
         return self.log_parser(self.open_log())
-        print('Log opened')

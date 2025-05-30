@@ -1,0 +1,17 @@
+{
+  "description": {
+    "template_name": "Directory Enumeration Detector",
+    "author": "Riadh Benlamine",
+    "description": "Detects sensitive file access, backup leaks, and hidden directories enumeration"
+  },
+  "points": {
+    "request": "(?i)(\\/\\.git\\/|\\/\\.env|\\/\\.svn\\/|\\/\\.ssh\\/|\\/\\.htaccess|\\/\\.htpasswd|\\/\\.bash_history|\\/backup\\/|\\/backups\\/|\\/old\\/|\\/tmp\\/|\\/upload[s]?\\/.*\\.php|\\/config(?:uration)?\\.php|wp-config\\.php|\\/phpinfo\\.php|\\/readme(?:\\.md|\\.txt)?|\\/license(?:\\.txt|\\.md)?|\\/web\\.config|\\/\\.DS_Store|\\/\\.idea\\/|\\/\\.vscode\\/|\\/\\.npmrc|\\/\\.yarnrc|\\.sql|\\.tar\\.gz|\\.zip|\\.rar|\\.bak|\\.old|\\.log|\\.backup|\\/admin\\/backup|\\/\\.well-known\\/|\\/\\.htaccess|\\/\\.user.ini|\\/composer\\.json|\\/package\\.json|\\/vendor\\/|\\/node_modules\\/|\\/\\.env\\.example|\\/\\.env\\.local|\\/\\.htpasswds|\\/\\.gitignore|\\/sitemap\\.xml|\\/robots\\.txt)",
+    "status": "(200|300|301|302|403|404|500)",
+    "host": false,
+    "user": false,
+    "agent": false,
+    "referrer": false,
+    "size": false,
+    "time": false
+  }
+}

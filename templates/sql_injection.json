@@ -1,0 +1,17 @@
+{
+  "description": {
+    "template_name": "SQL Injection Detector",
+    "author": "Riadh Benlamine",
+    "description": "SQLi patterns with minimal false positives by filtering context-aware SQL keywords, functions, and comment syntax."
+  },
+  "points": {
+    "request": "(?i)(\\bselect\\b\\s+.+\\s+\\bfrom\\b|\\binsert\\s+into\\b|\\bupdate\\b\\s+.+\\s+\\bset\\b|\\bdrop\\s+table\\b|\\bunion\\s+(all\\s+)?select\\b|\\bload_file\\s*\\(|\\binto\\s+outfile\\b|\\bbenchmark\\s*\\(|\\bsleep\\s*\\(|\\bwaitfor\\s+delay\\b|(--\\s)|(/\\*)|(\\*/)|\\bexec\\s+xp_cmdshell\\b|\\bchar\\s*\\(|\\bconcat\\s*\\(|\\bcase\\s+when\\b|\\bdeclare\\b|\\bcast\\s*\\(|\\bconvert\\s*\\(|\\bshutdown\\b|\\bsp_executesql\\b|\\band\\s+\\d+=\\d+|\\bor\\s+\\d+=\\d+|\\b1=1\\b|\\b1=0\\b|\\bif\\s*\\(|\\bunion\\b|\\btruncate\\b|\\bexec\\b|\\bversion\\(\\)|\\buser\\(\\)|\\bdatabase\\(\\))",
+    "agent": false,
+    "status": false,
+    "host": false,
+    "user": false,
+    "referrer": false,
+    "size": false,
+    "time": false
+  }
+}

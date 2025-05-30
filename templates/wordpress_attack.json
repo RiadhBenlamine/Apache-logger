@@ -1,0 +1,17 @@
+{
+  "description": {
+    "template_name": "WordPress Attack Detector",
+    "author": "Riadh Benlamine",
+    "description": "Detects exploitation attempts against WordPress"
+  },
+  "points": {
+    "host": false,
+    "user": false,
+    "time": false,
+    "request": "(?i)(\\.php\\?[^\\s]*=.*(\\./|\\.\\.\\/)|/wp-content/[^\\s]*\\.php\\?[^\\s]*=|/wp-admin/admin-ajax\\.php.*action=revslider_show_image|/wp-content/plugins/.*\\.(php|bak)|/shell\\.php|/upload\\.php|/cmd\\.php|/evil\\.php|/php\\?cmd=|eval\\(|base64_decode\\(|union\\s+select|concat\\(|/wp-config\\.php|/\\.env|/\\.git)",
+    "status": "200|500",
+    "size": "(^0$|[5-9][0-9]{3,})",
+    "referrer": "(?i)(sqlmap|exploit|shell|cmd|payload|github|pastebin|scanner|^-$)",
+    "agent": "(?i)(sqlmap|curl|python-requests|wpscan|httpx|nmap|masscan|fimap|nikto|havij|netsparker|acunetix|winhttp|libwww|python|dirbuster|xray|jaeles|curl|bot|scan|exploit|shell|spider|crawler)"
+  }
+}

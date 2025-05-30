@@ -12,4 +12,4 @@ to use this tool you don't need to install any python dependency
 
 ### Contrubtion
 
-if you wish to contribute in this project contact me via [Email](mailto:riadhriah03@gmail.com)
+if you wish to contribute in this project contact me via [Email](mailto:benlamineriadh@gmail.com)

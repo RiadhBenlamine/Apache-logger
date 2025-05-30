@@ -12,6 +12,6 @@
         "status":false,
         "size":false,
         "referrer":false,
-        "agent":"\\w*nikto|acunetix|nmap|sqlmap|wpscan\\w*"
+        "agent":"(?i)(nikto|acunetix|nmap|sqlmap|wpscan|arachni|netsparker|whatweb|dirbuster|zaproxy|w3af|fimap|havij|skipfish|masscan|shodan|nexpose|openvas|nessus|hydra|ffuf|feroxbuster|gau|httpx|hakrawler|xray|jaeles|crawlergo|nuclei|kube-hunter|kubebench|kubeaudit|metasploit|patator|brutespray|httprequest2|python-requests|httpclient|libwww|curl|wget|java|perl|go-http-client|python-urllib|pycurl|nmap-nse|winhttp|okhttp|axios|scan|checker|penetration|fuzzer|bruteforce|recon)"
     }
 }
